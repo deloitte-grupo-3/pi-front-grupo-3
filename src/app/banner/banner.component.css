@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   color: #FFF;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
 }
 .presentation-banner.title{
   width: 40%;

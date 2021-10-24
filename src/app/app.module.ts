@@ -8,6 +8,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BannerComponent } from './banner/banner.component';
     NavBarComponent,
     LoginFormComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
