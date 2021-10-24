@@ -1,5 +1,79 @@
 div {
   position: absolute;
-  width: 540px;
+  display: flex;
+  flex-direction: column;
+  left: 40%;
+  top: 20%;
+  background-color: #fff;
+  padding: 45px;
+  align-items: center;
+  color: #f37027;
+  border-radius: 15px;
+}
+.icon-login {
+  background-color: #f37027;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 20px;
 }
 
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  width: 100%;
+}
+
+label {
+  font-weight: 550;
+}
+
+input {
+  height: 30px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(155, 155, 155);
+  margin-bottom: 15px;
+}
+
+input::placeholder {
+  padding-left: 5px;
+}
+
+.login-btn {
+  width: 150px;
+  align-self: center;
+  height: 40px;
+  background-color: #f37027;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 5px;
+}
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #000;
+}
+
+.form-recuperar-senha {
+  width: 180px;
+  text-align: center;
+  color: #000;
+}
+
+.form-recuperar-senha strong {
+  color: #f37027;
+}
+
+.form-cadastro {
+  color: #f37027;
+  font-weight: bold;
+}

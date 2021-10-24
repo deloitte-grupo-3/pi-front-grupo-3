@@ -1,4 +1,8 @@
 /*
   Cor primária: #F37027
-
+  Escala de cinza: rgb(155, 155, 155);
  */
+
+body {
+  position: relative;
+}
