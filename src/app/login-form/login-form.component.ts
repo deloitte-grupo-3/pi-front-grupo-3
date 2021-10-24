@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
+  login?: string;
+  senha?: string;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sendForm(){
+    console.log("Senha:" + this.senha + " login" + this.login)
+
   }
 
 }
