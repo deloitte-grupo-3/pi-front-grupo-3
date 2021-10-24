@@ -1,0 +1,33 @@
+.banner{
+  background-image: url("../../assets/banner/background-img.jpg");
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  width: 95%;
+  height: 180px;
+  padding: 25px;
+  margin: 25px auto;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
+}
+.presentation-banner.title{
+  width: 40%;
+}
+
+.presentation-banner h3 {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-banner h4 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.presentation-banner .img {
+
+}
