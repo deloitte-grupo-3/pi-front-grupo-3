@@ -1,5 +1,16 @@
-div {
+.modal {
+  background: rgba(0, 0, 0, .5);
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -7,14 +18,21 @@ div {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 200px;
   background-color: #fff;
   padding: 45px;
   align-items: center;
   color: #f37027;
   border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(255, 90, 1, 0.473);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
+  position: relative;
 }
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 .icon-login {
   background-color: #f37027;
   height: 60px;
@@ -54,7 +72,6 @@ input::placeholder {
   background-color: #f37027;
   border-radius: 10px;
   border-style: none;
-  font-size: 20px;
   letter-spacing: 0.1em;
   font-weight: 500;
   color: #fff;

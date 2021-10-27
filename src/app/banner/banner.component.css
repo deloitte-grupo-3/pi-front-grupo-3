@@ -3,10 +3,8 @@
   background-size: 100%;
   background-position: center;
   display: flex;
-  width: 95%;
   height: 180px;
   padding: 25px;
-  margin: 25px auto;
   border-radius: 25px;
   align-items: center;
   justify-content: space-between;

@@ -16,8 +16,26 @@ export class LoginFormComponent implements OnInit {
   }
 
   sendForm(){
-    console.log("Senha:" + this.senha + " login" + this.login)
+    fetch("https://exlivraria.herokuapp.com/auth/signin", {
+      method: "post",
+      body: JSON.stringify({
+        username: this.login,
+        password: this.senha
+      }),
+      headers: {
+        "content-type": "application/json"
+      } 
+    })
+      .then(res => {
+        if (!res.ok) {
 
+        }
+        console.log(this.login);
+        return res.json()
+      })
+      .then(res => {
+        console.log(res);
+      })
   }
 
 }
