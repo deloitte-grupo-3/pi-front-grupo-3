@@ -1,13 +1,16 @@
-<div>
-  <img class="icon-login" src="../../assets/form-login/user-icon.svg" alt="Ilustração de uma pessoa para indicar que é o login" />
-  <h3>Login</h3>
-  <form class="login-form" action="#" method="post" (ngSubmit)="sendForm()">
-    <label for="user" class="login-user">Usuário</label>
-    <input type="text" class="user-input" id="user" placeholder="Digite seu login" [(ngModel)]="login" name="login"/>
-    <label for="password" class="login-password">Senha</label>
-    <input type="password" class="user-password" id="password" placeholder="Digite sua senha" [(ngModel)]="senha" name="senha"/>
-    <button type="submit" class="login-btn">Entrar</button>
-  </form>
-  <a href="#" class="form-recuperar-senha">Esqueceu sua senha? <strong>clique aqui</strong></a>
-  <p>Não possui cadastro? <a href="#" class="form-cadastro">Registrar</a></p>
+<div class="modal">
+  <div class="modal-body">
+    <button class="fechar" data-feather="x"></button>
+    <img class="icon-login" src="../../assets/form-login/user-icon.svg" alt="Ilustração de uma pessoa para indicar que é o login" />
+    <h3>Login</h3>
+    <form class="login-form" action="#" method="post" (ngSubmit)="sendForm()">
+      <label for="user" class="login-user">Usuário</label>
+      <input type="text" class="user-input" id="user" placeholder="Digite seu login" [(ngModel)]="login" name="login"/>
+      <label for="password" class="login-password">Senha</label>
+      <input type="password" class="user-password" id="password" placeholder="Digite sua senha" [(ngModel)]="senha" name="senha"/>
+      <button type="submit" class="login-btn">Entrar</button>
+    </form>
+    <a href="#" class="form-recuperar-senha">Esqueceu sua senha? <strong>clique aqui</strong></a>
+    <p>Não possui cadastro? <a href="#" class="form-cadastro">Registrar</a></p>
+  </div>
 </div>
