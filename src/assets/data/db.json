@@ -1,0 +1,74 @@
+{
+  "books" : [
+    {
+      "id": 1,
+      "title": "Harry Potter e a Pedra Filosofal",
+      "description": "Conheça Harry, filho de Tiago e Lílian Potter, feiticeiros que foram assassinados por um poderosíssimo bruxo, quando ele ainda era um bebê. Com isso, o menino acaba sendo levado para a casa dos tios que nada tinham a ver com o sobrenatural pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios, herdava roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu aniversário de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no país das maravilhas, que o conduz a um mundo mágico. Descobre sua verdadeira história e seu destino: ser um aprendiz de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais, o terrível Lorde das Trevas.",
+      "cover": "https://cache.skoob.com.br/local/images//PW_xixfHBfVBdm9-mQoIfLQZqUA=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/108/HARRY_POTTER_E_A_PEDRA_FILOSOFAL_1389761588B.jpg",
+      "category": "Fantasia"
+    },
+    {
+      "id": 2,
+      "title": "O Quadro Perdido",
+      "description": "'O Quadro Perdido - A Busca de uma Obra-prima de Caravaggio' conta a história de uma paixão verdadeira pela arte, que levou à descoberta de uma pintura de Michelangelo Merisi de Caravaggio: um retrato da prisão de Jesus Cristo, cujo paradeiro era desconhecido, e que foi surgir no mais improvável dos lugares: uma residência de jesuítas na Irlanda. Em 'O Quadro Perdido - A Busca de uma Obra-prima de Caravaggio', o autor conta como se deu essa descoberta e apresenta seus personagens-chave: uma bela e esperta pesquisadora, um carrancudo restaurador de quadros e um enigmático historiador da arte de mais de 90 anos.",
+      "cover": "https://cache.skoob.com.br/local/images//Utrd3hwiFee1eQTGudb1Ckkojq0=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/20196/O_QUADRO_PERDIDO_1237595337B.jpg",
+      "category": "Suspense"
+    },
+    {
+      "id": 3,
+      "title": "Star Wars: Leia",
+      "description": "Há muito tempo, em uma galáxia muito, muito distante… Havia uma princesa que virou lenda. Aos dezesseis anos, Princesa Leia Organa está prestes a encarar a missão mais desafiadora de sua vida até o momento: provar-se nas áreas do corpo, da mente e do coração para ser formalmente nomeada herdeira do trono de Alderaan. Mas Leia tem outras preocupações além de reivindicar seu direito à coroa: seus pais, Breha e Bail, vêm agindo de maneira estranha – estão distantes e apreensivos, aparentemente mais preocupados em dar jantares para seus aliados no Senado do que atenção para a própria filha. Determinada a descobrir os segredos que guardam, Leia começa a trilhar um caminho perigoso que a coloca diretamente sob o olhar atento do Império. E, ao descobrir o que seus pais e os aliados estão planejando, ela terá de encarar o que parece ser uma decisão impossível: escolher se dedicar ao povo de Alderaan ou à galáxia como um todo, que está precisando desesperadamente de uma heroína rebelde",
+      "cover": "https://cache.skoob.com.br/local/images//hb_iGDAPNa8ybCCOWT9FGRdq_PQ=/300x0/center/top/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/12012309/STAR_WARS_LEIA_163302143812012309SK-V11633021439B.jpg",
+      "category": "Fantasia"
+    },
+    {
+      "id":4,
+      "title":"Cartas a um jovem investidor",
+      "description":"As cartas reunidas aqui são uma fonte de inspiração e de aprendizado para todos que estão investindo hoje no seu próprio amanhã. “Como o mundo dos investimentos ainda tem muito a ser desbravado pela maioria dos brasileiros, escrevo não apenas para investidores jovens mas também para jovens investidores de idades mais avançadas.” – Gustavo Cerbasi Cerbasi tem 16 livros publicados e já vendeu 3 milhões de exemplares. Referência em educação financeira do país, Gustavo Cerbasi revela neste livro, por meio de cartas, os princípios fundamentais que aprendeu ao longo dos anos para investir de forma inteligente.",
+      "cover": "https://cache.skoob.com.br/local/images//yk472oTQqHcV6ECB4daoGGXh_r8=/300x0/center/top/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/14474/CARTAS_A_UM_JOVEM_INVESTIDOR_2384077274B.jpg",
+      "category": "Fantasia"
+    },
+    {
+      "id": 5,
+      "title": "Daisy Jones & The Six",
+      "description": "Esta é história de uma menina de Los Angeles que sonhava em ser uma estrela do rock e de uma banda que também almejava seu lugar ao sol. E de tudo o que aconteceu — o sexo, as drogas, os conflitos e os dramas — quando um produtor apostou (certo!) que juntos poderiam se tornar lendas da música.",
+      "cover": "https://cache.skoob.com.br/local/images//p3vebFz9qktC8C3yHXleGxZtsKA=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/861536/DAISY_JONES_AND_THE_SIX__UMA__1552566583861536SK1552566583B.jpg",
+      "category": "Biografia"
+    },
+    {
+      "id": 6,
+      "title": "Duna",
+      "description": "A vida do jovem Paul Atreides está prestes a mudar radicalmente. Após a visita de uma mulher misteriosa, ele é obrigado a deixar seu planeta natal para sobreviver ao ambiente árido e severo de Arrakis, o Planeta Deserto. Envolvido numa intrincada teia política e religiosa, Paul divide-se entre as obrigações de herdeiro e seu treinamento nas doutrinas secretas de uma antiga irmandade, que vê nele a esperança de realização de um plano urdido há séculos. Ecos de profecias ancestrais também o cercam entre os nativos de Arrakis. Seria ele o eleito que tornaria viáveis seus sonhos e planos ocultos?",
+      "cover": "https://cache.skoob.com.br/local/images//ggHUmbF0GSS7-VJC4BFCYE1ULqs=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/2278/DUNA_14922665702278SK1492266571B.jpg",
+      "category": "Fantasia"
+    },
+    {
+      "id": 7,
+      "title": "A biblioteca da meia-noite",
+      "description": "Em A biblioteca da meia-noite, Nora Seed se vê exatamente na situação pela qual todos gostaríamos de poder passar: voltar no tempo e desfazer algo de que nos arrependemos. Diante dessa possibilidade, Nora faz um mergulho interior viajando pelos livros da Biblioteca da Meia-Noite até entender o que é verdadeiramente importante na vida e o que faz, de fato, com que ela valha a pena ser vivida",
+      "cover": "https://cache.skoob.com.br/local/images//7Is9rcrjA0gcOo7abqsyTJC4jUw=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/11927296/A_BIBLIOTECA_DA_MEIANOITE_162806892711927296SK-V11628068928B.jpg",
+      "category": "Drama"
+    },
+    {
+      "id": 8,
+      "title": "Matéria Escura",
+      "description": "Essas são as últimas palavras que Jason Dessen ouve antes de acordar num laboratório, preso a uma maca. Raptado por um homem mascarado, Jason é levado para uma usina abandonada e deixado inconsciente. Quando acorda, um estranho sorri para ele, dizendo: “Bem-vindo de volta, amigo.” Neste novo mundo, Jason leva outra vida. Sua esposa não é sua esposa, seu filho nunca nasceu e, em vez de professor numa universidade mediana, ele é um gênio da física quântica que conseguiu um feito inimaginável. Algo impossível. Será que é este seu mundo, e o outro é apenas um sonho? E, se esta não for a vida que ele sempre levou, como voltar para sua família e tudo que ele conhece por realidade?",
+      "cover": "https://cache.skoob.com.br/local/images//CiZSzfoQUDLk3eBWx2ks0TITjcI=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/645465/MATERIA_ESCURA_1484658590645465SK1484658590B.jpg",
+      "category": "Fantasia"
+    },
+    {
+      "id": 9,
+      "title": "O retrato de Dorian Gray",
+      "description": "Dorian Gray tem uma beleza incomum que encanta a todos, em especial ao talentoso pintor Basil Hallward, para o qual se torna a maior fonte de inspiração após ser modelo de um de seus quadros. Ao se deparar com o retrato finalizado, Dorian, pela primeira vez, percebe o quanto é belo e, extasiado com a sensação do momento, pensa quão terrível seria envelhecer e perder toda a sua beleza. Ali imagina que o retrato poderia envelhecer em seu lugar e trazer as marcas do tempo enquanto ele fisicamente manteria sua beleza e juventude intactos. Seu desejo é atendido e ele pouco a pouco acompanha o retrato definhar, tomando uma aparência monstruosa ao se tornar um espelho que reflete a sua alma cruel, devassa e pecadora.",
+      "cover": "https://cache.skoob.com.br/local/images//AgXEqBTFz_HfRbLesLTzSLJyaIU=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/848/O_RETRATO_DE_DORIAN_GRAY_1635169194848SK-V11635169200B.jpg",
+      "category": "Fantasia"
+    },
+    {
+      "id": 10,
+      "title": "Vermelho, Branco e Sangue Azu",
+      "description": "O que pode acontecer quando o filho da presidenta dos Estados Unidos se apaixona pelo príncipe da Inglaterra? Quando sua mãe foi eleita presidenta dos Estados Unidos, Alex Claremont-Diaz se tornou o novo queridinho da mídia norte-americana. Bonito, carismático e com personalidade forte, Alex tem tudo para seguir os passos de seus pais e conquistar uma carreira na política, como tanto deseja. Mas quando sua família é convidada para o casamento real do príncipe britânico Philip, Alex tem que encarar o seu primeiro desafio diplomático: lidar com Henry, irmão mais novo de Philip, o príncipe mais adorado do mundo, com quem ele é constantemente comparado ― e que ele não suporta. O encontro entre os dois sai pior do que o esperado, e no dia seguinte todos os jornais do mundo estampam fotos de Alex e Henry caídos em cima do bolo real, insinuando uma briga séria entre os dois.",
+      "cover": "https://cache.skoob.com.br/local/images//jaawxjVsRsJK0hD-WLSCmryYUGs=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/966717/VERMELHON_BRANCO_E_SANGUE_AZUL_1568164875966717SK1568164875B.jpg",
+      "category": "Humor"
+    }
+  ]
+}

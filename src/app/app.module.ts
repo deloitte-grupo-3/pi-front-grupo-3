@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PrateleiraLivrosComponent } from './prateleira-livros/prateleira-livros.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { CategoriasComponent } from './categorias/categorias.component';
     LoginFormComponent,
     FooterComponent,
     BannerComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    PrateleiraLivrosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
