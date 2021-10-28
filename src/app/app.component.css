@@ -7,3 +7,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+body {
+  min-height: 100vh;
+}
+

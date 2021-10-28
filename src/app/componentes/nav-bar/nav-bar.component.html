@@ -2,11 +2,13 @@
 
   <section class="navegacao">
 
-    <img src="../../assets/imagens/logo fundo colorido.svg" alt="">
+    <a routerLink="/">
+      <img src="../../assets/imagens/logo fundo colorido.svg" alt="">
+    </a>
 
     <nav>
-      <a class="">Início</a>
-      <a>Sobre</a>
+      <a routerLink="/">Início</a>
+      <a routerLink="/sobre">Sobre</a>
     </nav>
 
   </section>
@@ -25,7 +27,7 @@
   <section class="menu">
 
       
-    <a>  
+    <a (click)="filho.abrirModal()">  
         <i data-feather="user"></i>
         Logar
     </a>
@@ -38,3 +40,5 @@
   </section>
 
 </header>
+
+<app-login-form></app-login-form>

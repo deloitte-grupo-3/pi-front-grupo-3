@@ -1,15 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
-import * as Feather from 'feather-icons';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent {
   title = 'expansaoLivraria';
 
-  ngAfterViewInit() {
-    Feather.replace();
-  }
 }
