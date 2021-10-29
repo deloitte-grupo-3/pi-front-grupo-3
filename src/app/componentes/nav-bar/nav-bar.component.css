@@ -17,6 +17,11 @@
     gap: 20px;
 }
 
+.navegacao nav a {
+  color: #F37027;
+  text-decoration: none;
+}
+
 .busca {
   display: flex;
   align-items: center;
@@ -39,6 +44,7 @@
     color: white;
     height: 32px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .menu {
@@ -54,6 +60,7 @@
     align-items: center;
     gap: 5px;
     position: relative;
+    cursor: pointer;
 }
 
 .menu span {

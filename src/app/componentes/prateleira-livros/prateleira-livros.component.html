@@ -1,0 +1,10 @@
+<section class="book-shelf">
+  <div class="img">
+    <div class="livro" *ngFor="let item of livros">
+      <img class="imgbt" src="{{item.image}}" width="170" height="260" />
+      <p class="descri">{{item.title}}</p>
+      <p class="valor"> R$ 59,90</p>
+      <button class="btn" type="submit">Comprar</button>
+    </div>
+  </div>
+</section>

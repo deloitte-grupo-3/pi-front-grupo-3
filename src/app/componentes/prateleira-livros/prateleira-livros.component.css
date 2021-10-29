@@ -1,12 +1,11 @@
 .book-shelf {
-  width: 85vw;
   margin: 0;
   display: flex;
 }
 .imgbt {
   border-radius: 1em;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
-
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: .5em;
 }
 
 .img {
@@ -15,13 +14,19 @@
   flex-wrap: wrap;
   margin-left: 30px;
   border-radius: 1em;
-  margin-bottom: 100px;
 }
+
 .descri {
   width: 170px;
   margin: 0;
   height: 40px;
+  overflow: hidden;
 }
+
+.descri, .valor {
+  font-weight: bold;
+}
+
 .valor {
   margin: 5px 0;
   color: #0fbd0f;
