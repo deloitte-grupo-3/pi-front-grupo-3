@@ -1,42 +1,36 @@
 <header class="barra">
 
   <section class="navegacao">
-
     <a routerLink="/">
       <img src="../../assets/imagens/logo fundo colorido.svg" alt="">
     </a>
-
     <nav>
       <a routerLink="/">Início</a>
       <a routerLink="/sobre">Sobre</a>
     </nav>
-
   </section>
 
-  <section class="busca">
-
-    <input class="textoBusca" type="search" placeholder="Buscar livros…">
-
-    <button> 
-        <i data-feather="search"></i>
+  <form class="busca" action="/busca" (ngSubmit)="buscar(formulario)" #formulario="ngForm">
+    <input
+      type="search"
+      placeholder="Buscar livros…"
+      name="q"
+      ngModel
+    >
+    <button type="submit">
+      <i data-feather="search"></i>
     </button>
-
-
-  </section>
+  </form>
 
   <section class="menu">
-
-      
-    <a (click)="filho.abrirModal()">  
-        <i data-feather="user"></i>
-        Logar
+    <a (click)="filho.abrirModal()">
+      <i data-feather="user"></i>
+      Logar
     </a>
-
     <a>
-        <i data-feather="shopping-cart"></i>
-        <span>0</span>
+      <i data-feather="shopping-cart"></i>
+      <span>0</span>
     </a>
-
   </section>
 
 </header>

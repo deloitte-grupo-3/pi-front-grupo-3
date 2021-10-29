@@ -1,6 +1,7 @@
 import * as Feather from 'feather-icons';
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import { LoginFormComponent} from '../login-form/login-form.component';
+import { LoginFormComponent } from '../login-form/login-form.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,9 +10,9 @@ import { LoginFormComponent} from '../login-form/login-form.component';
 })
 export class NavBarComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  @ViewChild(LoginFormComponent, {static: true})
+  @ViewChild(LoginFormComponent, { static: true })
   filho!: LoginFormComponent;
 
   ngOnInit(): void {
@@ -20,6 +21,10 @@ export class NavBarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     Feather.replace();
+  }
+
+  buscar(form: any){
+    this.router.navigate(["/busca"], {queryParams: {q: form.value.q}});
   }
 
 }
