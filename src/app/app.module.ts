@@ -14,6 +14,7 @@ import { PrateleiraLivrosComponent } from './componentes/prateleira-livros/prate
 import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
 import { BuscaComponent } from './rotas/busca/busca.component';
+import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BuscaComponent } from './rotas/busca/busca.component';
     PrateleiraLivrosComponent,
     IndexComponent,
     SobreComponent,
-    BuscaComponent
+    BuscaComponent,
+    PaginaProdutoComponent
   ],
   imports: [
     BrowserModule,

@@ -10,8 +10,8 @@ export class SobreComponent implements OnInit {
   constructor() { }
 
   parametros = {
-    titulo: "Você está na página 'Sobre'.",
-    descricao: "Obrigado por ler nossa descrição! Obrigado por ler nossa descrição! Obrigado por ler nossa descrição!",
+    titulo: "Sobre este site",
+    descricao: "Site desenvolvido como projeto integrador do curso de desenvolvimento full stack da escola Digital House em parceria com a ampresa Deloitte.",
     imagem: "../../assets/imagens/dh-deloitte.png"
   };
 

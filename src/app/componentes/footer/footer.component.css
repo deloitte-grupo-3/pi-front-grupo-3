@@ -3,7 +3,7 @@ footer {
   justify-content: center;
   background-color: #f37027;
   color: #fff;
-  width: 80%;
+  max-width: 940px;
   bottom: 0;
   margin: 1.5em auto 0;
   border-radius: 10px 10px 0 0;

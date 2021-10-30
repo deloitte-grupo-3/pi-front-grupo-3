@@ -6,6 +6,7 @@
   border-radius: 1em;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
   margin-bottom: .5em;
+  transition: all .2s ease-in-out;
 }
 
 .img {
@@ -29,8 +30,9 @@
 
 .valor {
   margin: 5px 0;
-  color: #0fbd0f;
+  color: #21C47F;
   font-size: 20px;
+  font-weight: bold;
 }
 .livro {
   margin: 25px;
@@ -46,4 +48,15 @@
   background-color: #fff;
   border: 1px #f8bd9d solid;
   border-radius: 1em;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover .imgbt {
+  transform: scale(1.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.10), 0px 6px 20px rgba(0, 0, 0, 0.10);
 }
