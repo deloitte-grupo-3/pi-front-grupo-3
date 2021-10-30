@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
-import { LoginFormComponent } from './componentes/login-form/login-form.component';
+import { ModalComponent } from './componentes/modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { BannerComponent } from './componentes/banner/banner.component';
@@ -20,7 +20,7 @@ import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.co
   declarations: [
     AppComponent,
     NavBarComponent,
-    LoginFormComponent,
+    ModalComponent,
     FooterComponent,
     BannerComponent,
     CategoriasComponent,

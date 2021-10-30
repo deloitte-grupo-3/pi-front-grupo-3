@@ -76,3 +76,72 @@
     text-align: center;
     line-height: 15px;
 }
+
+.icon-login {
+  background-color: #f37027;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-user, .login-password {
+  font-weight: 550;
+}
+
+.user-input, .user-password {
+  height: 30px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(155, 155, 155);
+  margin-bottom: 15px;
+}
+
+.user-input::placeholder, .user-password::placeholder{
+  padding-left: 5px;
+}
+
+.login-btn {
+  width: 150px;
+  align-self: center;
+  height: 40px;
+  background-color: #f37027;
+  border-radius: 10px;
+  border-style: none;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #000;
+}
+
+.form-recuperar-senha {
+  width: 180px;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.form-recuperar-senha strong {
+  color: #f37027;
+}
+
+.form-cadastro {
+  color: #f37027;
+  font-weight: bold;
+}
+
+.mensagemErro {
+  color: 	#FF0000;
+  font-size: 12px;
+  margin-top: 0;
+}
