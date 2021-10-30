@@ -9,7 +9,7 @@ import { ModalComponent } from './componentes/modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { BannerComponent } from './componentes/banner/banner.component';
-import { CategoriasComponent } from './componentes/categorias/categorias.component';
+// import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { PrateleiraLivrosComponent } from './componentes/prateleira-livros/prateleira-livros.component';
 import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
@@ -23,7 +23,7 @@ import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.co
     ModalComponent,
     FooterComponent,
     BannerComponent,
-    CategoriasComponent,
+    // CategoriasComponent,
     PrateleiraLivrosComponent,
     IndexComponent,
     SobreComponent,
