@@ -13,7 +13,7 @@ export class IndexComponent implements OnInit {
   livros: Book[] = [];
 
   parametros = {
-    titulo: "Você está na página inicial.",
+    titulo: "Bem vindo à nossa loja",
     descricao: "Bem vindo à página inicial. Bem vindo à página inicial. Bem vindo à página inicial. Bem vindo à página inicial.",
     imagem: "../../assets/banner/logo.svg"
   };

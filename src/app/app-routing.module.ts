@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
 import { BuscaComponent } from './rotas/busca/busca.component';
+import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'busca',
     component: BuscaComponent
+  },
+  {
+    path: 'livro/:id',
+    component: PaginaProdutoComponent
   }
 ];
 

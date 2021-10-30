@@ -27,7 +27,7 @@ export class CategoriasComponent implements OnInit {
 
   filtraCategorias() {
     this.livros.forEach((livro) => {
-      this.categorias.push(livro.category);
+      // this.categorias.push(livro.category);
     });
     this.categorias = [...new Set(this.categorias)]
   }
