@@ -26,6 +26,7 @@ export class PaginaProdutoComponent implements OnInit, AfterViewInit {
       .then(res => res.json())
       .then(res => {
         this.livro = res;
+        console.log(res);
       })
       
   }

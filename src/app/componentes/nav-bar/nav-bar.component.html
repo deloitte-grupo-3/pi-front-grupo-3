@@ -32,9 +32,8 @@
       {{nomeUsuario}}
       <a (click)='sair()'>Sair</a>
     </a>
-    <a>
+    <a (click)="modalCarrinho.abrirModal()" *ngIf="carrinho">
       <i data-feather="shopping-cart"></i>
-      <span>0</span>
     </a>
   </section>
 
@@ -65,8 +64,9 @@
       <label for="password" class="login-password">Senha</label>
       <input type="password" class="user-password" id="password" placeholder="Confirme sua senha" [(ngModel)]="confirmarSenha" name="confirmarSenha" required/>
       <p class="mensagemErro" *ngIf="erroSenha">Senhas diferentes, por favor regitrar senhas iguais</p>
-      <p class="mensagemErro" *ngIf="erroCadastro">Usuário já existe, tente um nodo nome</p>
+      <p class="mensagemErro" *ngIf="erroCadastro">Usuário já existe, tente um novo nome</p>
       <button type="submit" class="login-btn">Registrar</button>
     </form>
-    <p>Não possui cadastro? <a href="#" class="form-cadastro">Registrar</a></p>
-</app-modal>
+  </app-modal>
+
+  <app-modal #carrinho></app-modal>

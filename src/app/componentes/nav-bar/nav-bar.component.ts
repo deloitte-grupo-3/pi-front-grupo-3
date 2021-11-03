@@ -14,6 +14,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
 
   @ViewChild("autenticar") modalLogin!: ModalComponent;
   @ViewChild("registro") modalRegistro!: ModalComponent;
+  @ViewChild("carrinho") modalCarrinho!: ModalComponent;
 
   ngOnInit(): void {
     let user: any = localStorage.getItem('user');
@@ -42,6 +43,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   erroAoLogar?: boolean | undefined;
   erroSenha?: boolean | undefined;
   erroCadastro?: boolean | undefined;
+  carrinho?: boolean | undefined = true;
 
   sendForm(){
     fetch("https://exlivraria.herokuapp.com/auth/signin", {
