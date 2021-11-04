@@ -4,6 +4,7 @@ import { ModalComponent } from '../modal/modal.component';
 import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -57,6 +58,11 @@ export class NavBarComponent implements OnInit, AfterViewInit {
         link: 'Biografia',
       },
     ];
+  }
+
+  paginaCategoria(categoria:any) {
+    this.router.navigate([`/categoria/${categoria}`])
+    console.log(categoria);
   }
 
   ngOnInit(): void {

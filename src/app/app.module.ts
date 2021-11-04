@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -36,6 +37,7 @@ import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-fil
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([]),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
