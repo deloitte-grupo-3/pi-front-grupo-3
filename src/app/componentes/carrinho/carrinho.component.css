@@ -1,0 +1,54 @@
+.conteudo-carrinho {
+    display: flex;
+    gap: 30px;
+    color: black;
+    border-top: 1px solid rgb(180, 180, 180);
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
+.titulo {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    color: black;
+}
+  
+.capa {
+    height: 100px;
+}
+
+.informacoes p{
+    margin-top: 0;
+}
+
+.informacoes .nome {
+    margin-bottom: .1em;
+    font-weight: bold;
+}
+
+.valor {
+    margin-bottom: .1em;
+    color: #21C47F;
+    font-weight: bold;
+}
+
+.comprar {
+    background-color: #F37027;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    height: 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+}
+
+.finalizar {
+    color: black;
+}
+
+.total {
+    color: #21C47F;
+    font-weight: bold;
+}

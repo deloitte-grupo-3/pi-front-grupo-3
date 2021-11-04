@@ -1,0 +1,22 @@
+<p class="titulo">Carrinho</p>
+
+<div class="conteudo-carrinho" *ngFor="let item of itensCarrinho">
+    <div>
+        <img class="capa" src="{{item.image}}" alt="">
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes">
+            <p class="nome">{{item.title}}</p>
+            <p>{{item.author}}</p>
+        </div>
+        <div class="valores">
+            <p class="valor">R${{item.price}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="finalizar">
+    <p>Valor total da compra <span class="total">R${{total.toFixed(2)}}</span></p>
+    <button class="comprar" routerLink="/finalizar-compra" (click)="finalizarCompra()">Finalizar compra</button>
+</div>

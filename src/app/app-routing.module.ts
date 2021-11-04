@@ -4,6 +4,7 @@ import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
 import { BuscaComponent } from './rotas/busca/busca.component';
 import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
+import { FinalizarCompraComponent } from './rotas/finalizar-compra/finalizar-compra.component'
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'livro/:id',
     component: PaginaProdutoComponent
+  },
+  {
+    path: 'finalizar-compra',
+    component: FinalizarCompraComponent
   }
 ];
 

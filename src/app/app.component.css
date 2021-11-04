@@ -1,8 +1,3 @@
-/*
-  Cor primária: #F37027
-  Escala de cinza: rgb(155, 155, 155);
- */
-
 .front {
   display: flex;
   justify-content: space-evenly;
@@ -11,4 +6,3 @@
 body {
   min-height: 100vh;
 }
-
