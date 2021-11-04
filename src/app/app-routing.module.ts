@@ -1,3 +1,4 @@
+import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-filtro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './rotas/index/index.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'livro/:id',
     component: PaginaProdutoComponent
+  },
+  {
+    path: 'categoria/:categoria',
+    component: CategoriaFiltroComponent
   }
 ];
 

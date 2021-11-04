@@ -1,22 +1,27 @@
 <header class="barra">
-
   <section class="navegacao">
     <a routerLink="/">
-      <img src="../../assets/imagens/logo fundo colorido.svg" alt="">
+      <img src="../../assets/imagens/logo fundo colorido.svg" alt="" />
     </a>
     <nav>
       <a routerLink="/">Início</a>
       <a routerLink="/sobre">Sobre</a>
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let item of getCategorias()">
+          <a routerLink="/categoria/{{ item.link }}">{{ item.categoria }}</a>
+        </button>
+      </mat-menu>
     </nav>
   </section>
 
-  <form class="busca" action="/busca" (ngSubmit)="buscar(formulario)" #formulario="ngForm">
-    <input
-      type="search"
-      placeholder="Buscar livros…"
-      name="q"
-      ngModel
-    >
+  <form
+    class="busca"
+    action="/busca"
+    (ngSubmit)="buscar(formulario)"
+    #formulario="ngForm"
+  >
+    <input type="search" placeholder="Buscar livros…" name="q" ngModel />
     <button type="submit">
       <i data-feather="search"></i>
     </button>
@@ -29,44 +34,105 @@
     </a>
     <a *ngIf="nomeUsuario">
       <i data-feather="user"></i>
-      {{nomeUsuario}}
-      <a (click)='sair()'>Sair</a>
+      {{ nomeUsuario }}
+      <a (click)="sair()">Sair</a>
     </a>
     <a (click)="modalCarrinho.abrirModal()" *ngIf="carrinho">
       <i data-feather="shopping-cart"></i>
     </a>
   </section>
-
 </header>
 
 <app-modal #autenticar>
-  <img class="icon-login" src="../../assets/form-login/user-icon.svg" alt="Ilustração de uma pessoa para indicar que é o login" />
-    <h3>Login</h3>
-    <form class="login-form" action="#" method="post" (ngSubmit)="sendForm()">
-      <label for="user" class="login-user">Usuário</label>
-      <input type="text" class="user-input" id="user" placeholder="Digite seu login" [(ngModel)]="login" name="login" required/>
-      <label for="password" class="login-password">Senha</label>
-      <input type="password" class="user-password" id="password" placeholder="Digite sua senha" [(ngModel)]="senha" name="senha" required/>
-      <p class="mensagemErro" *ngIf="erroAoLogar">Falha ao logar, por favor tente novamente</p>
-      <button type="submit" class="login-btn">Entrar</button>
-    </form>
-    <p>Não possui cadastro? <a href="#" class="form-cadastro" (click)="abrirRegistro()">Registrar</a></p>
+  <img
+    class="icon-login"
+    src="../../assets/form-login/user-icon.svg"
+    alt="Ilustração de uma pessoa para indicar que é o login"
+  />
+  <h3>Login</h3>
+  <form class="login-form" action="#" method="post" (ngSubmit)="sendForm()">
+    <label for="user" class="login-user">Usuário</label>
+    <input
+      type="text"
+      class="user-input"
+      id="user"
+      placeholder="Digite seu login"
+      [(ngModel)]="login"
+      name="login"
+      required
+    />
+    <label for="password" class="login-password">Senha</label>
+    <input
+      type="password"
+      class="user-password"
+      id="password"
+      placeholder="Digite sua senha"
+      [(ngModel)]="senha"
+      name="senha"
+      required
+    />
+    <p class="mensagemErro" *ngIf="erroAoLogar">
+      Falha ao logar, por favor tente novamente
+    </p>
+    <button type="submit" class="login-btn">Entrar</button>
+  </form>
+  <p>
+    Não possui cadastro?
+    <a href="#" class="form-cadastro" (click)="abrirRegistro()">Registrar</a>
+  </p>
 </app-modal>
 
 <app-modal #registro>
-  <img class="icon-login" src="../../assets/form-login/user-icon.svg" alt="Ilustração de uma pessoa para indicar que é o login" />
-    <h3>Registro</h3>
-    <form class="login-form" action="#" method="post" (ngSubmit)="registrarUsuario()">
-      <label for="user" class="login-user">Usuário</label>
-      <input type="text" class="user-input" id="user" placeholder="Digite um nome de usuário" [(ngModel)]="usuarioCadastro" name="usuarioCadastro" required/>
-      <label for="password" class="login-password">Senha</label>
-      <input type="password" class="user-password" id="password" placeholder="Digite uma senha" [(ngModel)]="senhaCadastro" name="senhaCadastro" required/>
-      <label for="password" class="login-password">Senha</label>
-      <input type="password" class="user-password" id="password" placeholder="Confirme sua senha" [(ngModel)]="confirmarSenha" name="confirmarSenha" required/>
-      <p class="mensagemErro" *ngIf="erroSenha">Senhas diferentes, por favor regitrar senhas iguais</p>
-      <p class="mensagemErro" *ngIf="erroCadastro">Usuário já existe, tente um novo nome</p>
-      <button type="submit" class="login-btn">Registrar</button>
-    </form>
-  </app-modal>
+  <img
+    class="icon-login"
+    src="../../assets/form-login/user-icon.svg"
+    alt="Ilustração de uma pessoa para indicar que é o login"
+  />
+  <h3>Registro</h3>
+  <form
+    class="login-form"
+    action="#"
+    method="post"
+    (ngSubmit)="registrarUsuario()"
+  >
+    <label for="user" class="login-user">Usuário</label>
+    <input
+      type="text"
+      class="user-input"
+      id="user"
+      placeholder="Digite um nome de usuário"
+      [(ngModel)]="usuarioCadastro"
+      name="usuarioCadastro"
+      required
+    />
+    <label for="password" class="login-password">Senha</label>
+    <input
+      type="password"
+      class="user-password"
+      id="password"
+      placeholder="Digite uma senha"
+      [(ngModel)]="senhaCadastro"
+      name="senhaCadastro"
+      required
+    />
+    <label for="password" class="login-password">Senha</label>
+    <input
+      type="password"
+      class="user-password"
+      id="password"
+      placeholder="Confirme sua senha"
+      [(ngModel)]="confirmarSenha"
+      name="confirmarSenha"
+      required
+    />
+    <p class="mensagemErro" *ngIf="erroSenha">
+      Senhas diferentes, por favor regitrar senhas iguais
+    </p>
+    <p class="mensagemErro" *ngIf="erroCadastro">
+      Usuário já existe, tente um novo nome
+    </p>
+    <button type="submit" class="login-btn">Registrar</button>
+  </form>
+</app-modal>
 
-  <app-modal #carrinho></app-modal>
+<app-modal #carrinho></app-modal>

@@ -1,3 +1,4 @@
+import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +16,8 @@ import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
 import { BuscaComponent } from './rotas/busca/busca.component';
 import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-filtro.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.co
     IndexComponent,
     SobreComponent,
     BuscaComponent,
-    PaginaProdutoComponent
+    PaginaProdutoComponent,
+    CategoriaFiltroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

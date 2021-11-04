@@ -4,31 +4,29 @@ import { ActivatedRoute } from '@angular/router';
 import * as Feather from 'feather-icons';
 
 @Component({
-  selector: 'app-pagina-produto',
-  templateUrl: './pagina-produto.component.html',
-  styleUrls: ['./pagina-produto.component.css']
+  selector: 'app-categoria-filtro',
+  templateUrl: './categoria-filtro.component.html',
+  styleUrls: ['./categoria-filtro.component.css']
 })
-export class PaginaProdutoComponent implements OnInit, AfterViewInit {
+export class CategoriaFiltroComponent implements OnInit, AfterViewInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  livro: Book = {};
+  livros: Book[] = [];
 
   ngOnInit(): void {
+    const categoria = this.route.snapshot.paramMap.get("categoria");
 
-    const id = this.route.snapshot.paramMap.get("id");
-
-    fetch(`https://exlivraria.herokuapp.com/api/book/v1/${id}`, {
+    fetch(`https://exlivraria.herokuapp.com/api/book/v1/search/category/${categoria}`, {
       headers: {
         'content-type': 'application/json'
       }
     })
       .then(res => res.json())
       .then(res => {
-        this.livro = res;
+        this.livros = res;
         console.log(res);
       })
-
   }
 
   ngAfterViewInit() {
