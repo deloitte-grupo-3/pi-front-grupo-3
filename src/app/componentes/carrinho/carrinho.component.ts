@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface itensDoCarrinho {
   price: number,
@@ -15,26 +16,26 @@ interface itensDoCarrinho {
 })
 export class CarrinhoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input() modalCarrinho: any;
+  @Input() modalLogin: any;
   @Input() itensCarrinho: itensDoCarrinho[] = [];
   @Input() total: number = 0;
+  @Input() comprar?: string;
   
   finalizarCompra() {
     this.modalCarrinho.fecharModal();
+    let usuario: any = localStorage.getItem('user');    
+    if (!usuario) {
+      this.modalLogin.abrirModal();
+      console.log(usuario);
+    } else {
+      this.router.navigate(['/finalizar-compra']);
+    }
   }
 
   ngOnInit(): void {
   }
-
-//  total = (() => {
-//    let total = 0;
-//    this.itensCarrinho.forEach(item => {
-//     total += item.price;
-//    })
-//    console.log(total);
-//    return total;
-//  })();
 
 }

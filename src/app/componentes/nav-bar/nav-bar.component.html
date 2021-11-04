@@ -50,7 +50,7 @@
       <p class="mensagemErro" *ngIf="erroAoLogar">Falha ao logar, por favor tente novamente</p>
       <button type="submit" class="login-btn">Entrar</button>
     </form>
-    <p>Não possui cadastro? <a href="#" class="form-cadastro" (click)="abrirRegistro()">Registrar</a></p>
+    <p>Não possui cadastro? <a class="form-cadastro" (click)="abrirRegistro()">Registrar</a></p>
 </app-modal>
 
 <app-modal #registro>
@@ -70,5 +70,10 @@
   </app-modal>
 
   <app-modal #carrinho direita="true">
-    <app-carrinho [modalCarrinho]="modalCarrinho" [itensCarrinho]="itensCarrinho" [total]="total"></app-carrinho>
+    <app-carrinho
+      [modalCarrinho]="modalCarrinho"
+      [modalLogin]="modalLogin"
+      [itensCarrinho]="itensCarrinho"
+      [total]="total"
+    ></app-carrinho>
   </app-modal>

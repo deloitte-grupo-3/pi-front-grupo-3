@@ -125,6 +125,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     localStorage.removeItem('user');
     this.nomeUsuario = undefined;
     setTimeout(() => Feather.replace(), 0);
+    this.router.navigate(["/"])
   }
 
   abrirCarrinho() {
