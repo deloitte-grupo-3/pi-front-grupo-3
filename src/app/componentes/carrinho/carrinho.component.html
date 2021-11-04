@@ -1,4 +1,5 @@
-<p class="titulo">Carrinho</p>
+<p class="titulo" *ngIf='!comprar'>Carrinho</p>
+<p class="titulo" *ngIf="comprar">Seus produtos</p>
 
 <div class="conteudo-carrinho" *ngFor="let item of itensCarrinho">
     <div>
@@ -18,5 +19,11 @@
 
 <div class="finalizar">
     <p>Valor total da compra <span class="total">R${{total.toFixed(2)}}</span></p>
-    <button class="comprar" routerLink="/finalizar-compra" (click)="finalizarCompra()">Finalizar compra</button>
+    <button class="comprar"  
+    (click)="finalizarCompra()" 
+    *ngIf="!comprar && itensCarrinho.length">Finalizar pedido</button>
+    <button class="comprar" 
+    routerLink="/" 
+    (click)="modalCarrinho.fecharModal()" 
+    *ngIf="!comprar && !itensCarrinho.length">Continuar comprando</button>
 </div>
