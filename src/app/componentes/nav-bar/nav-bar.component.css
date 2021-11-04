@@ -143,3 +143,15 @@ p {
   font-size: 12px;
   margin-top: 0;
 }
+
+.categorias {
+  position: relative;
+}
+.categorias-dropdown {
+  display: none;
+}
+.categorias:hover .categorias-dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+}

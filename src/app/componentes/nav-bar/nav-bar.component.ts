@@ -155,4 +155,10 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     this.nomeUsuario = undefined;
     setTimeout(() => Feather.replace(), 0);
   }
+
+  paginaCategoria(categoria:any) {
+    this.router.navigate([`/categoria/${categoria}`])
+    console.log(categoria);
+  }
+
 }
