@@ -22,7 +22,7 @@ export class PaginaProdutoComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
 
     const id = this.route.snapshot.paramMap.get("id");
-    
+
     fetch(`https://exlivraria.herokuapp.com/api/book/v1/${id}`, {
       headers: {
         'content-type': 'application/json'
@@ -33,7 +33,7 @@ export class PaginaProdutoComponent implements OnInit, AfterViewInit {
         this.livro = res;
         console.log(res);
       })
-      
+
   }
 
   ngAfterViewInit() {

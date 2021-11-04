@@ -1,3 +1,4 @@
+import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,9 +16,12 @@ import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
 import { BuscaComponent } from './rotas/busca/busca.component';
 import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-filtro.component';
 import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
 import { FinalizarCompraComponent } from './rotas/finalizar-compra/finalizar-compra.component';
 import { NotifierModule } from 'angular-notifier';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +36,7 @@ import { NotifierModule } from 'angular-notifier';
     SobreComponent,
     BuscaComponent,
     PaginaProdutoComponent,
+    CategoriaFiltroComponent,
     CarrinhoComponent,
     FinalizarCompraComponent
   ],
@@ -40,6 +45,8 @@ import { NotifierModule } from 'angular-notifier';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
     NotifierModule
   ],
   providers: [],

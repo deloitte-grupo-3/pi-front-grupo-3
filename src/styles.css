@@ -108,6 +108,12 @@ body {
     background-color: #f0ad4e;
     color: #fff;
   }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
   .notifier__notification--warning .notifier__notification-button-icon {
     fill: #fff;
   }
+
