@@ -20,7 +20,7 @@ interface itensDoCarrinho {
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit, AfterViewInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   @ViewChild('autenticar') modalLogin!: ModalComponent;
   @ViewChild('registro') modalRegistro!: ModalComponent;
@@ -71,11 +71,6 @@ export class NavBarComponent implements OnInit, AfterViewInit {
 
   @Input() livros!: Book[];
 
-  @ViewChild("autenticar") modalLogin!: ModalComponent;
-  @ViewChild("registro") modalRegistro!: ModalComponent;
-  @ViewChild("carrinho") modalCarrinho!: ModalComponent;
-
-
   ngOnInit(): void {
     let user: any = localStorage.getItem('user');
 
@@ -105,7 +100,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   erroCadastro?: boolean | undefined;
   carrinho?: boolean | undefined = true;
   itensCarrinho: itensDoCarrinho[] = [];
-  total =  0;
+  total = 0;
 
   sendForm() {
     fetch('https://exlivraria.herokuapp.com/auth/signin', {
@@ -175,7 +170,6 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     setTimeout(() => Feather.replace(), 0);
     this.router.navigate(["/"])
   }
-
 
   abrirCarrinho() {
     this.total = 0;
