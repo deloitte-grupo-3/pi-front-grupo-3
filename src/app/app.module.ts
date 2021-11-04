@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -42,6 +43,7 @@ import { NotifierModule } from 'angular-notifier';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([]),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,

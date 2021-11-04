@@ -24,8 +24,8 @@ export class CategoriaFiltroComponent implements OnInit, AfterViewInit {
     })
       .then(res => res.json())
       .then(res => {
-        this.livros = res;
         console.log(res);
+        this.livros = res._embedded.bookVoes;
       })
   }
 

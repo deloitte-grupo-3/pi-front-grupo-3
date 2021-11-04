@@ -4,7 +4,9 @@ import { ModalComponent } from '../modal/modal.component';
 import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 import { Book } from '../../model/book';
+
 
 
 interface itensDoCarrinho {
@@ -69,7 +71,13 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     ];
   }
 
+  paginaCategoria(categoria:any) {
+    this.router.navigate([`/categoria/${categoria}`])
+    console.log(categoria);
+  }
+
   @Input() livros!: Book[];
+
 
   ngOnInit(): void {
     let user: any = localStorage.getItem('user');

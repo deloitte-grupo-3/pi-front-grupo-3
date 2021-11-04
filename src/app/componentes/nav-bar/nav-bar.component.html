@@ -6,12 +6,14 @@
     <nav>
       <a routerLink="/">Início</a>
       <a routerLink="/sobre">Sobre</a>
-      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngFor="let item of getCategorias()">
-          <a routerLink="/categoria/{{ item.link }}">{{ item.categoria }}</a>
-        </button>
-      </mat-menu>
+      <div class="categorias">
+        <span>Categorias ▾</span>
+        <div class="categorias-dropdown">
+          <button class="btn-category" (click)="paginaCategoria(item.link)" *ngFor="let item of getCategorias()">
+            <a class="category-link" style="color: #FFF;">{{ item.categoria }}</a>
+          </button>
+        </div>
+      </div>
     </nav>
   </section>
 

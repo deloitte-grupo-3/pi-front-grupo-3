@@ -145,3 +145,36 @@ p {
   font-size: 12px;
   margin-top: 0;
 }
+
+.categorias {
+  position: relative;
+}
+.categorias-dropdown {
+  display: none;
+}
+.categorias:hover .categorias-dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+
+.btn-category{
+  width: 130px;
+  height: 30px;
+  padding: 5px;
+  background-color: #F37027;
+  border-radius: 3px;
+  margin: 1px;
+  border: 1mm solid #F37027;
+  box-shadow: 1px 1px 5px #b1511d;
+}
+
+a.category-link{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-category:hover{
+  border-width: 2px;
+  border-color: #f3935f;
+}
