@@ -1,4 +1,4 @@
-<div class="modal" [ngClass]="{ativo : estadoModal}" (click)="clickFora($event)">
+<div class="modal" [ngClass]="{ativo: estadoModal, 'modal-direita': direita}" (click)="clickFora($event)">
   <div class="modal-body">
     <button class="fechar" (click)="fecharModal()">
       <i data-feather="x"></i>

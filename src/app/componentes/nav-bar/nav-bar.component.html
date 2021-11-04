@@ -32,7 +32,7 @@
       {{nomeUsuario}}
       <a (click)='sair()'>Sair</a>
     </a>
-    <a (click)="modalCarrinho.abrirModal()" *ngIf="carrinho">
+    <a (click)="abrirCarrinho()" *ngIf="carrinho">
       <i data-feather="shopping-cart"></i>
     </a>
   </section>
@@ -69,4 +69,6 @@
     </form>
   </app-modal>
 
-  <app-modal #carrinho></app-modal>
+  <app-modal #carrinho direita="true">
+    <app-carrinho [modalCarrinho]="modalCarrinho" [itensCarrinho]="itensCarrinho" [total]="total"></app-carrinho>
+  </app-modal>

@@ -15,6 +15,9 @@ import { IndexComponent } from './rotas/index/index.component';
 import { SobreComponent } from './rotas/sobre/sobre.component';
 import { BuscaComponent } from './rotas/busca/busca.component';
 import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
+import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
+import { FinalizarCompraComponent } from './rotas/finalizar-compra/finalizar-compra.component';
+import { NotifierModule } from 'angular-notifier';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.co
     IndexComponent,
     SobreComponent,
     BuscaComponent,
-    PaginaProdutoComponent
+    PaginaProdutoComponent,
+    CarrinhoComponent,
+    FinalizarCompraComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]
