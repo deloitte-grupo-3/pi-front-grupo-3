@@ -1,0 +1,39 @@
+<div class="shell container" >
+    <div class="produtos">
+        <app-carrinho [itensCarrinho]="itensCarrinho" [total]="total" comprar="true"></app-carrinho>
+    </div>
+    <form class="formulario">
+        <h2>Informe seus dados</h2>
+        <fieldset>
+            <legend>Dados de entrega</legend>
+            <p>
+                <label>
+                    Endereço (contendo número)
+                    <input type="text" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    CEP
+                    <input type="text" />
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label>
+                    Nome completo
+                    <input type="text" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    Email
+                    <input type="text" />
+                </label>
+            </p>
+        </fieldset>
+        <button class="botao">Finalizar compra</button>
+    </form>
+</div>

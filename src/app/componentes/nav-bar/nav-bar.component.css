@@ -116,6 +116,7 @@
   font-weight: 500;
   color: #fff;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 p {
@@ -136,6 +137,7 @@ p {
 .form-cadastro {
   color: #f37027;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .mensagemErro {

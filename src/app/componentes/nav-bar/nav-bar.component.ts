@@ -1,23 +1,34 @@
 import * as Feather from 'feather-icons';
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { Book } from '../../model/book';
 
+
+
+interface itensDoCarrinho {
+  price: number,
+  title: string,
+  id: number,
+  author: string,
+  image: string;
+}
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit, AfterViewInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   @ViewChild('autenticar') modalLogin!: ModalComponent;
   @ViewChild('registro') modalRegistro!: ModalComponent;
   @ViewChild('carrinho') modalCarrinho!: ModalComponent;
   @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
+
 
   someMethod() {
     this.trigger.openMenu();
@@ -65,6 +76,9 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     console.log(categoria);
   }
 
+  @Input() livros!: Book[];
+
+
   ngOnInit(): void {
     let user: any = localStorage.getItem('user');
 
@@ -93,6 +107,8 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   erroSenha?: boolean | undefined;
   erroCadastro?: boolean | undefined;
   carrinho?: boolean | undefined = true;
+  itensCarrinho: itensDoCarrinho[] = [];
+  total = 0;
 
   sendForm() {
     fetch('https://exlivraria.herokuapp.com/auth/signin', {
@@ -160,5 +176,19 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     localStorage.removeItem('user');
     this.nomeUsuario = undefined;
     setTimeout(() => Feather.replace(), 0);
+    this.router.navigate(["/"])
   }
+
+  abrirCarrinho() {
+    this.total = 0;
+    this.modalCarrinho.abrirModal();
+    const carrinho = localStorage.getItem("carrinho");
+    if (carrinho) {
+      this.itensCarrinho = JSON.parse(carrinho);
+    }
+    this.itensCarrinho.forEach(item => {
+      this.total += item.price;
+    })
+  }
+
 }

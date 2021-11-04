@@ -13,14 +13,13 @@
 }
 
 .modal.ativo {
-  display: flex;
-  
+  display: flex; 
 }
 
 .modal-body {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -32,6 +31,7 @@
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
   position: relative;
+  box-sizing: border-box;
 }
 
 .fechar {
@@ -44,4 +44,22 @@
   cursor: pointer;
 }
 
+.modal-direita .modal-body {
+  display: block;
+  width: 20%;
+  height: 100vh;
+  overflow-y: auto;
+  margin-right: 0;
+  padding: 1em 1.5em;
+  align-items: flex-start;
+  border-radius: 0;
+}
 
+.modal-direita .fechar {
+  top: 13px;
+  right: 8px;
+}
+
+.modal-direita.ativo {
+  display: block;
+}
