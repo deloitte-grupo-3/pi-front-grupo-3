@@ -9,6 +9,8 @@ export class ModalComponent implements OnInit {
 
   constructor() { }
 
+  @Input() direita?: string;
+
   ngOnInit(): void { }
 
   estadoModal = false;
@@ -19,7 +21,7 @@ export class ModalComponent implements OnInit {
     this.apertarEsc();
   }
 
-  fecharModal(){
+  fecharModal = () => {
     this.estadoModal = false;
     document.body.removeEventListener("keyup", this.keyListener);
   }

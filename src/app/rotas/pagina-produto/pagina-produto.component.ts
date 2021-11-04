@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Book } from '../../model/book';
 import { ActivatedRoute } from '@angular/router';
 import * as Feather from 'feather-icons';
+import { NotifierService } from 'angular-notifier';
 
 @Component({
   selector: 'app-pagina-produto',
@@ -10,7 +11,11 @@ import * as Feather from 'feather-icons';
 })
 export class PaginaProdutoComponent implements OnInit, AfterViewInit {
 
-  constructor(private route: ActivatedRoute) { }
+  private readonly notifier: NotifierService;
+
+  constructor(private route: ActivatedRoute, notifierService: NotifierService) { 
+    this.notifier = notifierService;
+  }
 
   livro: Book = {};
 
@@ -33,6 +38,25 @@ export class PaginaProdutoComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     Feather.replace();
+  }
+
+  adicionarAoCarrinho() {
+    const produto = {
+      id: this.livro.id,
+      author: this.livro.author,
+      title: this.livro.title,
+      image: this.livro.image,
+      price: this.livro.price
+    }
+    let carrinho: any = localStorage.getItem('carrinho');
+    if (carrinho) {
+      carrinho = JSON.parse(carrinho);
+    } else {
+      carrinho = [];
+    }
+    carrinho.push(produto);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    this.notifier.notify('success', 'Livro adicionado ao carrinho!');
   }
 
 }

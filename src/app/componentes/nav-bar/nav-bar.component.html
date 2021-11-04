@@ -37,7 +37,7 @@
       {{ nomeUsuario }}
       <a (click)="sair()">Sair</a>
     </a>
-    <a (click)="modalCarrinho.abrirModal()" *ngIf="carrinho">
+    <a (click)="abrirCarrinho()" *ngIf="carrinho">
       <i data-feather="shopping-cart"></i>
     </a>
   </section>
@@ -80,6 +80,19 @@
     Não possui cadastro?
     <a href="#" class="form-cadastro" (click)="abrirRegistro()">Registrar</a>
   </p>
+
+  <img class="icon-login" src="../../assets/form-login/user-icon.svg" alt="Ilustração de uma pessoa para indicar que é o login" />
+    <h3>Login</h3>
+    <form class="login-form" action="#" method="post" (ngSubmit)="sendForm()">
+      <label for="user" class="login-user">Usuário</label>
+      <input type="text" class="user-input" id="user" placeholder="Digite seu login" [(ngModel)]="login" name="login" required/>
+      <label for="password" class="login-password">Senha</label>
+      <input type="password" class="user-password" id="password" placeholder="Digite sua senha" [(ngModel)]="senha" name="senha" required/>
+      <p class="mensagemErro" *ngIf="erroAoLogar">Falha ao logar, por favor tente novamente</p>
+      <button type="submit" class="login-btn">Entrar</button>
+    </form>
+    <p>Não possui cadastro? <a class="form-cadastro" (click)="abrirRegistro()">Registrar</a></p>
+
 </app-modal>
 
 <app-modal #registro>
@@ -135,4 +148,15 @@
   </form>
 </app-modal>
 
+
 <app-modal #carrinho></app-modal>
+
+  <app-modal #carrinho direita="true">
+    <app-carrinho
+      [modalCarrinho]="modalCarrinho"
+      [modalLogin]="modalLogin"
+      [itensCarrinho]="itensCarrinho"
+      [total]="total"
+    ></app-carrinho>
+  </app-modal>
+

@@ -18,6 +18,10 @@ import { BuscaComponent } from './rotas/busca/busca.component';
 import { PaginaProdutoComponent } from './rotas/pagina-produto/pagina-produto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-filtro.component';
+import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
+import { FinalizarCompraComponent } from './rotas/finalizar-compra/finalizar-compra.component';
+import { NotifierModule } from 'angular-notifier';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-fil
     SobreComponent,
     BuscaComponent,
     PaginaProdutoComponent,
-    CategoriaFiltroComponent
+    CategoriaFiltroComponent,
+    CarrinhoComponent,
+    FinalizarCompraComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,8 @@ import { CategoriaFiltroComponent } from './rotas/categoria-filtro/categoria-fil
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    NotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]
