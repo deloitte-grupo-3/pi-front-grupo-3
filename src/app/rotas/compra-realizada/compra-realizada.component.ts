@@ -23,8 +23,4 @@ export class CompraRealizadaComponent implements OnInit, AfterViewInit {
     Feather.replace();
   }
 
-  index() {
-    window.location.href='/'
-  }
-
 }
