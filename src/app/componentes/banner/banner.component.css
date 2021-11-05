@@ -9,6 +9,14 @@
   align-items: center;
   justify-content: space-between;
   color: #FFF;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    background-image: none;
+    height: 0px;
+  }
 }
 
 .presentation-banner.title {
@@ -25,3 +33,10 @@
   font-size: 20px;
   margin: 0;
 } 
+
+@media (max-width: 600px) {
+  .presentation-banner {
+    background-image: none;
+    height: 0px;
+  }
+}
