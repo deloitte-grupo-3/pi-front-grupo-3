@@ -178,3 +178,40 @@ a.category-link{
   border-width: 2px;
   border-color: #f3935f;
 }
+
+.carregar {
+background-color: rgba(0, 0, 0, .5);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+color: white;
+font-size: 1em;
+}
+
+.livroCarregando {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
