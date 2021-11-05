@@ -1,0 +1,26 @@
+.categorias {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  color: #fff;
+}
+
+.categorias ul {
+  padding: 0;
+  margin-left: 15px;
+}
+
+.categorias li {
+  list-style: none;
+  margin-top: 15px;
+  background-color: #f37027;
+  border-radius: 5px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+

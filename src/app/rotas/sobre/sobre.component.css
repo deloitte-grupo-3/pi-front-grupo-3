@@ -1,0 +1,378 @@
+.conteudoGeral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.tecnologias {
+    display: flex;
+    gap: 1em;
+}
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.tecnologias span {
+    color: white;
+}
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.colaboradores p {
+    max-width: 70px;
+    margin: auto;
+    text-align: center;
+}
+
+.colaboradores a {
+    text-decoration: none;
+    color: black;
+}
+
+.colaboradores > div:hover img {
+    transform: scale(1.1);
+}
+
+.colaboradores img {
+    transition: all .2s ease-in-out;
+}
+
+
+
+
+
+@media (min-width: 700px) and (max-width: 900px) {
+
+    .conteudoGeral{
+     font-size: 12px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+   }
+
+
+   .tecnologias div {
+    background-color: #F37027;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 100px;
+    
+}
+
+}
+   
+@media (min-width: 600px) and (max-width: 699px) {
+
+    .conteudoGeral{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+}
+
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 90px;
+    
+}
+
+
+}
+
+
+@media (min-width: 510px) and (max-width: 599px) {
+
+    .conteudoGeral{
+        font-size: 9px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+         
+}
+
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 80px;
+    
+}
+
+
+}
+
+
+@media (min-width: 457px) and (max-width: 509px) {
+
+    .conteudoGeral{
+        font-size: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+}
+
+
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 70px;
+    
+}
+
+
+
+}
+
+
+
+
+
+@media (min-width: 403px) and (max-width: 456px) {
+
+    .conteudoGeral{
+        font-size: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+}
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 60px;
+    
+}
+
+
+}
+
+
+
+@media (min-width: 351px) and (max-width: 402px) {
+
+    .conteudoGeral{
+        font-size: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+}
+
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 55px;
+    
+}
+
+
+}
+
+
+
+@media (min-width: 298px) and (max-width: 350px) {
+
+    .conteudoGeral{
+        font-size: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+}
+
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.colaboradores p {
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgColab{
+    max-width: 50px;
+    
+}
+
+
+}

@@ -1,0 +1,150 @@
+.banner {
+  background-image: url("../../../assets/banner/background-img.jpg");
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  height: 180px;
+  padding: 25px;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+.presentation-banner.title {
+  width: 40%;
+}
+
+.presentation-banner h3 {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-banner h4 {
+  font-size: 19px;
+  margin: 0;  
+} 
+
+.presentation-banner.img2{
+  width:250px;
+}
+
+@media (min-width: 630px) and (max-width: 848px) {
+
+ .presentation-banner.img2{
+  width:180px;
+}
+
+.presentation-banner h3 {
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-banner h4 {
+  font-size: 15px;
+  margin: 0;  
+  width: 193px;
+} 
+
+}
+
+@media (min-width: 480px) and (max-width: 629px) {
+
+  .presentation-banner.img2{
+   width:120px;
+ }
+
+ .presentation-banner h3 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-banner h4 {
+  font-size: 8px;
+  margin: 0;  
+  width: 158px;
+} 
+  
+}
+
+@media (min-width: 350px) and (max-width: 479px) {
+
+  .presentation-banner.img2{
+   width:76px;
+ }
+  
+ .presentation-banner h3 {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-banner h4 {
+  font-size: 6px;
+  margin: 0;  
+  width: 100px;
+} 
+
+.banner {
+  background-image: url("../../../assets/banner/background-img.jpg");
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  height: 120px;
+  padding: 25px;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+}
+
+@media (min-width: 250px) and (max-width: 349px) {
+
+  .presentation-banner.img2{
+   width:65px;
+   
+ }
+  
+ .presentation-banner h3 {
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-banner h4 {
+  font-size: 4px;
+  margin: 0;  
+} 
+
+.banner {
+  background-image: url("../../../assets/banner/background-img.jpg");
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  height: 120px;
+  padding: 25px;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+
+}
+
+
+
+@media (min-width: 849px) and (max-width:900px) {
+
+  .presentation-banner h4 {
+    font-size: 16px;
+    margin: 0;  
+    width: 180px;
+  } 
+  
+}

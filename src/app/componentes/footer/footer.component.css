@@ -1,0 +1,58 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f37027;
+  color: #fff;
+  max-width: 60%;
+  bottom: 0;
+  margin: 1.5em auto 0;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 0 0 #FF7E36;
+  position: relative; 
+   
+
+}
+
+.contato {
+  color: white;
+  text-decoration: none;
+  font-size: 9px;
+  position: relative;
+}
+
+
+@media (min-width: 500px) and (max-width: 2000px){
+.footer1 {
+  font-size: 15px;
+  
+ 
+   
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #f37027;
+  color: #fff;
+  max-width: 60%;
+  bottom: 0;
+  margin: 1.5em auto 0;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 0 0 #FF7E36;
+  position: relative; 
+  
+}
+
+}
+
+@media (min-width: 200px) and (max-width:499px){
+
+  .footer1 {
+    font-size: 11px;
+  }
+
+}
+
+
