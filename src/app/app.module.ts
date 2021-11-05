@@ -23,6 +23,7 @@ import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
 import { FinalizarCompraComponent } from './rotas/finalizar-compra/finalizar-compra.component';
 import { NotifierModule } from 'angular-notifier';
 import { CompraRealizadaComponent } from './rotas/compra-realizada/compra-realizada.component';
+import { PaginacaoComponent } from './componentes/paginacao/paginacao.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { CompraRealizadaComponent } from './rotas/compra-realizada/compra-realiz
     CategoriaFiltroComponent,
     CarrinhoComponent,
     FinalizarCompraComponent,
-    CompraRealizadaComponent
+    CompraRealizadaComponent,
+    PaginacaoComponent
   ],
   imports: [
     BrowserModule,
