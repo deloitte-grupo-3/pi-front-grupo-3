@@ -2,9 +2,7 @@ import * as Feather from 'feather-icons';
 import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { Router } from '@angular/router';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { RouterModule } from '@angular/router';
 import { Book } from '../../model/book';
 
 
@@ -72,8 +70,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   }
 
   paginaCategoria(categoria:any) {
-    this.router.navigate([`/categoria/${categoria}`])
-    console.log(categoria);
+    window.location.href=`/categoria/${categoria}`;
   }
 
   @Input() livros!: Book[];
