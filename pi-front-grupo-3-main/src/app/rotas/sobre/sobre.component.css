@@ -1,0 +1,57 @@
+.conteudoGeral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.tecnologias {
+    display: flex;
+    gap: 1em;
+}
+
+.tecnologias div {
+    background-color: #F37027;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.tecnologias span {
+    color: white;
+}
+
+.colaboradores {
+    display: flex;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.colaboradores p {
+    max-width: 70px;
+    margin: auto;
+    text-align: center;
+}
+
+.colaboradores a {
+    text-decoration: none;
+    color: black;
+}
+
+.colaboradores > div:hover img {
+    transform: scale(1.1);
+}
+
+.colaboradores img {
+    transition: all .2s ease-in-out;
+}

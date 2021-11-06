@@ -1,0 +1,17 @@
+<div class="shell grid">
+    <div class="capa">
+        <img src="{{livro.image}}" alt="">
+    </div>
+    <div class="conteudo">
+        <div>
+            <h1>{{livro.title}}</h1>
+            <p class="autor">por <b>{{livro.author}}</b></p>
+            <p class="descricao">Descrição do livro</p>
+            <p>{{livro.description}}</p>
+        </div>
+        <div class="valor-car">
+            <p class="valor">R${{livro.price}}</p>
+            <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho <i data-feather="shopping-cart"></i></button>
+        </div>
+    </div>
+</div>

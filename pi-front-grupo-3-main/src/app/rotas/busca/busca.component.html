@@ -1,0 +1,5 @@
+<div class="shell">
+    <h1>Você buscou por <i>{{query}}</i></h1>
+    <app-prateleira-livros [livros]="livros" *ngIf="!erro"></app-prateleira-livros>
+    <p *ngIf="erro">Nenhum livro encontrado</p>
+</div>

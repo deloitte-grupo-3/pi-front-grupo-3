@@ -1,0 +1,39 @@
+.geral {
+    text-align: center;
+    max-width: 600px;
+    margin: 3em auto;
+    font-size: 20px;
+}
+
+.titulo {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.titulo span {
+    color: #F37027;
+}
+
+.svg {
+    width: 100px;
+    height: 100px;
+    color: #21C37F;
+    margin-bottom: 2em;
+}
+
+.descricao {
+    line-height: 1.62em;
+    margin-bottom: 4em;
+}
+
+.botao {
+    background-color: #F37027;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0 1em;
+}
