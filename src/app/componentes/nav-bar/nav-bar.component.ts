@@ -55,7 +55,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
         link: 'Fantasia',
       },
       {
-        categoria: 'Econômia',
+        categoria: 'Economia',
         link: 'Economia',
       },
       {

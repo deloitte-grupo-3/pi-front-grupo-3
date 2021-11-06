@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #f37027;
   color: #fff;
   max-width: 940px;
@@ -8,4 +8,13 @@ footer {
   margin: 1.5em auto 0;
   border-radius: 10px 10px 0 0;
   box-shadow: 0 -10px 0 0 #FF7E36;
+}
+
+footer div.socials img{
+  margin-left: 7px;
+}
+
+footer.footer div.emailus a{
+  text-decoration: none;
+  color: inherit;
 }

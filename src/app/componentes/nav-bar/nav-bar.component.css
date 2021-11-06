@@ -52,7 +52,6 @@
     background-color: #F37027;
     border-radius: 5px;
     border-style: none;
-    color: white;
     height: 42px;
     box-sizing: border-box;
     cursor: pointer;
@@ -198,8 +197,8 @@ p {
 }
 
 .btn-category:hover{
-  border-width: 2px;
-  border-color: #f3935f;
+  border-width: 3px;
+  border-color: #ffffff;
 }
 
 .carregar {
