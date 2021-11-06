@@ -7,13 +7,6 @@
   grid-template-areas: "navegacao busca menu";
 }
 
-@media (max-width: 600px) {
-  .barra {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "navegacao menu"
-                         "busca busca";
-  }
-}
 
 .navegacao {
   display: flex;
@@ -23,8 +16,8 @@
 }
 
 .navegacao nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .navegacao nav a {
@@ -49,14 +42,14 @@
 }
 
 .busca button {
-    background-color: #F37027;
-    border-radius: 5px;
-    border-style: none;
-    color: white;
-    height: 42px;
-    box-sizing: border-box;
-    cursor: pointer;
-    padding: 0 .8em;
+  background-color: #F37027;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  height: 42px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0 .8em;
 }
 
 .menu {
@@ -203,18 +196,18 @@ p {
 }
 
 .carregar {
-background-color: rgba(0, 0, 0, .5);
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-color: white;
-font-size: 1em;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1em;
 }
 
 .livroCarregando {
@@ -236,5 +229,35 @@ font-size: 1em;
   100% {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .barra {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "navegacao menu"
+                         "busca busca";
+  }
+
+  .navegacao, .navegacao nav, .menu {
+    gap: 10px;
+  }
+
+  .navegacao {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-left: -30px;
+  }
+
+  .navegacao nav {
+    margin-bottom: 1em;
+  }
+
+  .categorias span {
+    white-space: nowrap;
   }
 }

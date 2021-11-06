@@ -10,9 +10,15 @@
     margin-bottom: 1.5em;
 }
 
+.proposta {
+    text-align: center;
+}
+
 .tecnologias {
     display: flex;
     gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tecnologias div {
@@ -35,6 +41,8 @@
     display: flex;
     text-align: center;
     margin-bottom: 4em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .colaboradores p {
