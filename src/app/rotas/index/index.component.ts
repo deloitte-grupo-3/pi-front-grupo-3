@@ -16,7 +16,7 @@ export class IndexComponent implements OnInit {
 
   parametros = {
     titulo: "Bem vindo à nossa loja",
-    descricao: "Bem vindo à página inicial. Bem vindo à página inicial. Bem vindo à página inicial. Bem vindo à página inicial.",
+    descricao: "Bem vindo à página inicial da Expansão Livraria. Os melhores livros com os melhores preços.",
     imagem: "../../assets/banner/logo.svg"
   };
 
