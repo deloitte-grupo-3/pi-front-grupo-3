@@ -41,7 +41,7 @@
 
 .busca input {
   width: 100%;
-  height: 32px;
+  height: 42px;
   border-radius: 5px;
   border-width: 1px;
   box-sizing: border-box;
@@ -52,10 +52,10 @@
     background-color: #F37027;
     border-radius: 5px;
     border-style: none;
-    color: white;
-    height: 32px;
+    height: 42px;
     box-sizing: border-box;
     cursor: pointer;
+    padding: 0 .8em;
 }
 
 .menu {
@@ -148,9 +148,14 @@ p {
 
 .categorias {
   position: relative;
+  cursor: default;
 }
 .categorias-dropdown {
   display: none;
+  background-color: white;
+  padding: .2em;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 25%), 0px 4px 20px rgb(0 0 0 / 25%);
 }
 .categorias:hover .categorias-dropdown {
   display: block;
@@ -159,23 +164,76 @@ p {
 }
 
 .btn-category{
-  width: 130px;
-  height: 30px;
-  padding: 5px;
-  background-color: #F37027;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  transition: .4s;
+  box-sizing: border-box;
+  background: transparent;
   border-radius: 3px;
-  margin-top: 2px;
-  border: 1mm solid #F37027;
-  box-shadow: 1px 1px 5px #b1511d;
-  font-weight: 700;
 }
 
-a.category-link{
+.btn-category:hover {
+  background-color: #f37027;
+}
+
+.btn-category:hover .category-link {
+  color: white;
+}
+
+.category-link{
   font-size: 14px;
   font-weight: 500;
+  color: #f37027;
+  transition: .4s;
+  white-space: nowrap;
+}
+
+.category-link:hover {
+  color: white;
 }
 
 .btn-category:hover{
   border-width: 3px;
   border-color: #ffffff;
+}
+
+.carregar {
+background-color: rgba(0, 0, 0, .5);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+color: white;
+font-size: 1em;
+}
+
+.livroCarregando {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
 }

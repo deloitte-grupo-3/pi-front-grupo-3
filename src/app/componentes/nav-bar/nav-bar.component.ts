@@ -2,9 +2,7 @@ import * as Feather from 'feather-icons';
 import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { Router } from '@angular/router';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { RouterModule } from '@angular/router';
 import { Book } from '../../model/book';
 
 
@@ -72,8 +70,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   }
 
   paginaCategoria(categoria:any) {
-    this.router.navigate([`/categoria/${categoria}`])
-    console.log(categoria);
+    window.location.href=`/categoria/${categoria}`;
   }
 
   @Input() livros!: Book[];
@@ -109,8 +106,14 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   carrinho?: boolean | undefined = true;
   itensCarrinho: itensDoCarrinho[] = [];
   total = 0;
+  carregando: boolean = false;
 
   sendForm() {
+
+    this.carregando = true;
+    
+    setTimeout(() => Feather.replace(), 0);
+
     fetch('https://exlivraria.herokuapp.com/auth/signin', {
       method: 'post',
       body: JSON.stringify({
@@ -133,7 +136,11 @@ export class NavBarComponent implements OnInit, AfterViewInit {
         this.modalLogin.fecharModal();
         this.nomeUsuario = this.login;
         setTimeout(() => Feather.replace(), 0);
-      });
+        this.carregando = false;
+      }) 
+      .catch(() => {
+        this.carregando = false;
+      })
   }
 
   registrarUsuario() {
@@ -142,16 +149,20 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       return;
     }
 
+    this.carregando = true;
+    
+    setTimeout(() => Feather.replace(), 0);
+
     fetch('https://exlivraria.herokuapp.com/auth/createUser', {
-      method: 'post',
-      body: JSON.stringify({
-        username: this.usuarioCadastro,
-        password: this.senhaCadastro,
-      }),
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
+        method: 'post',
+        body: JSON.stringify({
+          username: this.usuarioCadastro,
+          password: this.senhaCadastro,
+        }),
+        headers: {
+          'content-type': 'application/json',
+        },
+      })
       .then((res) => {
         if (!res.ok) {
           this.erroCadastro = true;
@@ -164,9 +175,13 @@ export class NavBarComponent implements OnInit, AfterViewInit {
         this.modalRegistro.fecharModal();
         this.nomeUsuario = this.usuarioCadastro;
         setTimeout(() => Feather.replace(), 0);
+        this.carregando = false;
+      })
+      .catch(() => {
+          this.carregando = false;
       });
-  }
-
+    }
+    
   abrirRegistro() {
     this.modalLogin.fecharModal();
     this.modalRegistro.abrirModal();
@@ -185,6 +200,8 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     const carrinho = localStorage.getItem("carrinho");
     if (carrinho) {
       this.itensCarrinho = JSON.parse(carrinho);
+    } else {
+      this.itensCarrinho = [];
     }
     this.itensCarrinho.forEach(item => {
       this.total += item.price;

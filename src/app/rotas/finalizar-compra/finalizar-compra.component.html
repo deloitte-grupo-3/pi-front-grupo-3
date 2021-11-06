@@ -2,20 +2,20 @@
     <div class="produtos">
         <app-carrinho [itensCarrinho]="itensCarrinho" [total]="total" comprar="true"></app-carrinho>
     </div>
-    <form class="formulario">
+    <form (submit)="onSubmit()" class="formulario">
         <h2>Informe seus dados</h2>
         <fieldset>
             <legend>Dados de entrega</legend>
             <p>
                 <label>
                     Endereço (contendo número)
-                    <input type="text" />
+                    <input [(ngModel)]="endereco" name="endereco" type="text" required/>
                 </label>
             </p>
             <p>
                 <label>
                     CEP
-                    <input type="text" />
+                    <input [(ngModel)]="cep" name="cep" type="text" required/>
                 </label>
             </p>
         </fieldset>
@@ -24,16 +24,16 @@
             <p>
                 <label>
                     Nome completo
-                    <input type="text" />
+                    <input [(ngModel)]="nome" name="nome" type="text" required/>
                 </label>
             </p>
             <p>
                 <label>
                     Email
-                    <input type="text" />
+                    <input [(ngModel)]="email" name="email" type="text" required/>
                 </label>
             </p>
         </fieldset>
-        <button class="botao">Finalizar compra</button>
+        <button (click)="onSubmit()" class="botao">Finalizar compra</button>
     </form>
 </div>
