@@ -10,19 +10,14 @@
         <span>Categorias ▾</span>
         <div class="categorias-dropdown">
           <button class="btn-category" (click)="paginaCategoria(item.link)" *ngFor="let item of getCategorias()">
-            <a class="category-link" style="color: #FFF;">{{ item.categoria }}</a>
+            <a class="category-link">{{ item.categoria }}</a>
           </button>
         </div>
       </div>
     </nav>
   </section>
 
-  <form
-    class="busca"
-    action="/busca"
-    (ngSubmit)="buscar(formulario)"
-    #formulario="ngForm"
-  >
+  <form class="busca" action="/busca" (ngSubmit)="buscar(formulario)" #formulario="ngForm">
     <input type="search" placeholder="Buscar livros…" name="q" ngModel />
     <button type="submit">
       <i data-feather="search"></i>
@@ -57,6 +52,10 @@
     <button type="submit" class="login-btn">Entrar</button>
   </form>
   <p>Não possui cadastro? <a class="form-cadastro" (click)="abrirRegistro()">Registrar</a></p>
+  <div class="carregar" *ngIf='carregando'>
+    <i class="livroCarregando" data-feather="book-open"></i>
+    <span>Carregando...</span>
+  </div>
 </app-modal>
 
 <app-modal #registro>
@@ -110,6 +109,10 @@
     </p>
     <button type="submit" class="login-btn">Registrar</button>
   </form>
+  <div class="carregar" *ngIf='carregando'>
+    <i class="livroCarregando" data-feather="book-open"></i>
+    <span>Carregando...</span>
+  </div>
 </app-modal>
 
 

@@ -1,0 +1,23 @@
+.paginas {
+    margin-bottom: .5em;
+}
+
+.paginas a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em 1.5em;
+    color: #FF7E36;
+    transition: .4s;
+}
+
+.paginas a:hover {
+    color: white;
+    background-color: #FF7E36;
+    border-radius: 5px;
+}
+
+.paginas a.ativo {
+    color: white;
+    background-color: #FF7E36;
+    border-radius: 5px;
+}

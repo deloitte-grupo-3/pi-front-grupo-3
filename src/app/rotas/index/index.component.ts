@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../../model/book';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -8,9 +9,10 @@ import { Book } from '../../model/book';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   livros: Book[] = [];
+  pagina: any = {};
 
   parametros = {
     titulo: "Bem vindo à nossa loja",
@@ -20,7 +22,8 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
 
-    fetch('https://exlivraria.herokuapp.com/api/book/v1?direction=asc&limit=10&page=0', {
+    this.route.queryParams.subscribe(params => {
+      fetch(`https://exlivraria.herokuapp.com/api/book/v1?direction=asc&limit=10&page=${params.page || 0}`, {
       headers: {
         'content-type': 'application/json'
       }
@@ -28,8 +31,10 @@ export class IndexComponent implements OnInit {
       .then(res => res.json())
       .then(res => {
         this.livros = res._embedded.bookVoes;
-        console.log(res._embedded.bookVoes);
+        this.pagina = res.page;
+        console.log(this.pagina);
       })
+    })
 
   }
 
