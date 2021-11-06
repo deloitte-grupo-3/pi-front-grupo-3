@@ -12,10 +12,18 @@ input {
     display: flex;
     width: 100%;
     gap: 2em;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
+/* .formulario {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
 .formulario, .produtos {
-    width: 100%;
+    /* width: 100%; */
+    max-width: 100%;
 }
 
 fieldset {

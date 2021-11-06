@@ -5,7 +5,7 @@
 .paginas a {
     text-decoration: none;
     display: inline-block;
-    padding: 1em 1.5em;
+    padding: .5em 1em;
     color: #FF7E36;
     transition: .4s;
 }

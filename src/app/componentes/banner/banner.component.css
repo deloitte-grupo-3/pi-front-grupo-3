@@ -35,8 +35,7 @@
 } 
 
 @media (max-width: 600px) {
-  .presentation-banner {
-    background-image: none;
-    height: 0px;
+  .banner {
+    display: none;
   }
 }

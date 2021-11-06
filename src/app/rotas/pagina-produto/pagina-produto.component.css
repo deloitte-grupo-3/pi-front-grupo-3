@@ -50,3 +50,14 @@
     margin-top: auto;
     margin-bottom: 1.5em;
 }
+
+@media (max-width: 600px) {
+    .grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .capa img {
+        max-width: 100%;
+    }
+}
