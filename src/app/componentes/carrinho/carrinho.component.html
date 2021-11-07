@@ -1,7 +1,7 @@
 <p class="titulo" *ngIf='!comprar'>Carrinho</p>
 <p class="titulo" *ngIf="comprar">Seus produtos</p>
 
-<div class="conteudo-carrinho" *ngFor="let item of itensCarrinho">
+<div class="conteudo-carrinho" *ngFor="let item of itensCarrinho; let i = index">
     <div>
         <img class="capa" src="{{item.image}}" alt="">
     </div>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div>
-        <button type="submit" *ngIf='!comprar' class="Xbutton" (click)="removerDoCarrinho(item.id)">
+        <button type="submit" *ngIf='!comprar' class="Xbutton" (click)="removerDoCarrinho(i)">
         <img src="../../../assets/imagens/x.svg" alt="">
         </button>
     </div>

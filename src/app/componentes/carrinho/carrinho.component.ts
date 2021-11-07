@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { NotifierService } from 'angular-notifier';
 
 interface itensDoCarrinho {
   price: number,
@@ -16,14 +17,18 @@ interface itensDoCarrinho {
 })
 export class CarrinhoComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  private readonly notifier: NotifierService;
 
+  constructor(private router: Router, notifierService: NotifierService) {
+    this.notifier = notifierService;
+   }
+
+  @Input() abrirCarrinho?: any;
   @Input() modalCarrinho: any;
   @Input() modalLogin: any;
   @Input() itensCarrinho: itensDoCarrinho[] = [];
   @Input() total: number = 0;
   @Input() comprar?: string;
-  idCarrinho = 0;
   novoCarrinho:itensDoCarrinho[] = [];
   
   finalizarCompra() {
@@ -40,31 +45,10 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  removerDoCarrinho(idCarrinho:any){
-    this.idCarrinho = idCarrinho;
-    this.modalCarrinho.abrirModal();
-    const carrinho = localStorage.getItem("carrinho");
-    if(carrinho){
-      this.itensCarrinho = JSON.parse(carrinho);
-      for(let i = 0; i < this.itensCarrinho.length; i++){
-        if(this.itensCarrinho[i].id === idCarrinho){
-          delete this.itensCarrinho[i];
-          idCarrinho = 0;
-        }
-        else{
-          this.novoCarrinho.push(this.itensCarrinho[i]);
-          console.log(this.itensCarrinho[i]);
-        }
-      }
-      localStorage.removeItem('carrinho');
-      localStorage.setItem('carrinho', JSON.stringify(this.novoCarrinho));
-      this.novoCarrinho = [];
-      this.modalCarrinho.abrirModal();
-      }
-     else{
-      this.itensCarrinho = []
-    }
-    
-
+  removerDoCarrinho(index:any){
+    this.itensCarrinho.splice(index, 1);
+    localStorage.setItem('carrinho', JSON.stringify(this.itensCarrinho));
+    this.abrirCarrinho();
+    this.notifier.notify('error', 'Livro removido do carrinho.');
   }
 }

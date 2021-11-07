@@ -5,6 +5,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "navegacao busca menu";
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
@@ -39,6 +41,7 @@
   border-width: 1px;
   box-sizing: border-box;
   padding-inline: 10px;
+  margin-left: 1em;
 }
 
 .busca button {
@@ -144,6 +147,11 @@ p {
   position: relative;
   cursor: default;
 }
+
+.categorias span {
+  white-space: nowrap;
+}
+
 .categorias-dropdown {
   display: none;
   background-color: white;
@@ -232,7 +240,7 @@ p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .barra {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "navegacao menu"
@@ -259,5 +267,9 @@ p {
 
   .categorias span {
     white-space: nowrap;
+  }
+
+  .busca input {
+    margin-left: 0;
   }
 }
