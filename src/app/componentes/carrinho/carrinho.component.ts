@@ -42,21 +42,23 @@ export class CarrinhoComponent implements OnInit {
 
   removerDoCarrinho(idCarrinho:any){
     this.idCarrinho = idCarrinho;
-    console.log(idCarrinho);
     this.modalCarrinho.abrirModal();
     const carrinho = localStorage.getItem("carrinho");
     if(carrinho){
       this.itensCarrinho = JSON.parse(carrinho);
       for(let i = 0; i < this.itensCarrinho.length; i++){
-        if(this.itensCarrinho[i].id == idCarrinho){
+        if(this.itensCarrinho[i].id === idCarrinho){
           delete this.itensCarrinho[i];
+          idCarrinho = 0;
         }
         else{
           this.novoCarrinho.push(this.itensCarrinho[i]);
+          console.log(this.itensCarrinho[i]);
         }
       }
-      localStorage.setItem("carrinho",JSON.stringify(""))
+      localStorage.removeItem('carrinho');
       localStorage.setItem('carrinho', JSON.stringify(this.novoCarrinho));
+      this.novoCarrinho = [];
       this.modalCarrinho.abrirModal();
       }
      else{
