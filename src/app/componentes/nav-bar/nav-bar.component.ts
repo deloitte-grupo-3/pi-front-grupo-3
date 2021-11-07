@@ -202,10 +202,12 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       this.itensCarrinho = JSON.parse(carrinho);
     } else {
       this.itensCarrinho = [];
+      this.total = 0;
     }
     this.itensCarrinho.forEach(item => {
       this.total += item.price;
     })
   }
+
 
 }

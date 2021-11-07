@@ -52,3 +52,13 @@
     color: #21C47F;
     font-weight: bold;
 }
+
+.Xbutton{
+    display:flex;
+    outline:none;
+    border:none;
+    background-color: white;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
