@@ -15,6 +15,11 @@
             <p class="valor">R${{item.price}}</p>
         </div>
     </div>
+    <div>
+        <button type="submit" *ngIf='!comprar' class="Xbutton" (click)="removerDoCarrinho(item.id)">
+        <img src="../../../assets/imagens/x.svg" alt="">
+        </button>
+    </div>
 </div>
 
 <div class="finalizar">

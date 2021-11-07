@@ -52,3 +52,12 @@
     color: #21C47F;
     font-weight: bold;
 }
+
+.Xbutton{
+    display:absolute;
+    outline:none;
+    border:none;
+    background-color: white;
+    
+    cursor: pointer;
+}
